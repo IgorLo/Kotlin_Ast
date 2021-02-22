@@ -1,4 +1,4 @@
-package ru.spbstu.astparser.drawing
+package ru.gdcn.igorlo.kotlinast.drawing
 
 object Constants {
     const val OBF = "{"

@@ -1,4 +1,5 @@
-package ru.spbstu.astparser.parser
+package ru.gdcn.igorlo.kotlinast.parser
+
 
 fun String.isPackageLine(): Boolean = contains("^package\\s".toRegex())
 fun String.isFunLine(): Boolean = contains("(^|[A-Za-z]+ )fun [A-Za-z]+([ (])".toRegex())

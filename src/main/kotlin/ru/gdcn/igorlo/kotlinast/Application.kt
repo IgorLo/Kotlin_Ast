@@ -1,7 +1,7 @@
-package ru.spbstu.astparser
+package ru.gdcn.igorlo.kotlinast
 
-import ru.spbstu.astparser.parser.AstBuilder
-import visualization.Drawer
+import ru.gdcn.igorlo.kotlinast.parser.AstBuilder
+import ru.gdcn.igorlo.kotlinast.drawing.Drawer
 import java.io.File
 import java.util.*
 

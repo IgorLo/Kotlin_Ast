@@ -1,24 +1,26 @@
-package visualization
+package ru.gdcn.igorlo.kotlinast.drawing
+
 import guru.nidi.graphviz.engine.Format
 import guru.nidi.graphviz.engine.Graphviz
 import guru.nidi.graphviz.parse.Parser
-import ru.spbstu.astparser.drawing.Constants.ARROW
-import ru.spbstu.astparser.drawing.Constants.ASSIGN
-import ru.spbstu.astparser.drawing.Constants.CBF
-import ru.spbstu.astparser.drawing.Constants.CBS
-import ru.spbstu.astparser.drawing.Constants.DIGRAPH
-import ru.spbstu.astparser.drawing.Constants.LABEL
-import ru.spbstu.astparser.drawing.Constants.NEXT_LINE
-import ru.spbstu.astparser.drawing.Constants.OBF
-import ru.spbstu.astparser.drawing.Constants.OBS
-import ru.spbstu.astparser.drawing.Constants.SEMICOLON
-import ru.spbstu.astparser.drawing.Constants.SPACE
-import ru.spbstu.astparser.drawing.Constants.STRING
-import ru.spbstu.astparser.parser.AstNode
+import ru.gdcn.igorlo.kotlinast.drawing.Constants.ARROW
+import ru.gdcn.igorlo.kotlinast.drawing.Constants.ASSIGN
+import ru.gdcn.igorlo.kotlinast.drawing.Constants.CBF
+import ru.gdcn.igorlo.kotlinast.drawing.Constants.CBS
+import ru.gdcn.igorlo.kotlinast.drawing.Constants.DIGRAPH
+import ru.gdcn.igorlo.kotlinast.drawing.Constants.LABEL
+import ru.gdcn.igorlo.kotlinast.drawing.Constants.NEXT_LINE
+import ru.gdcn.igorlo.kotlinast.drawing.Constants.OBF
+import ru.gdcn.igorlo.kotlinast.drawing.Constants.OBS
+import ru.gdcn.igorlo.kotlinast.drawing.Constants.SEMICOLON
+import ru.gdcn.igorlo.kotlinast.drawing.Constants.SPACE
+import ru.gdcn.igorlo.kotlinast.drawing.Constants.STRING
+import ru.gdcn.igorlo.kotlinast.parser.AstBuilder.AstNode
 import java.io.IOException
 import java.io.File
 import java.nio.file.Paths
 import java.nio.file.Files
+
 
 class Drawer(val dots : MutableList<Pair<Int, List<String>>> = ArrayList(), val links: MutableList<Pair<String, String>> = ArrayList()) {
 
