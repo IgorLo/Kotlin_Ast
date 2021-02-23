@@ -15,7 +15,7 @@ import ru.gdcn.igorlo.kotlinast.drawing.Constants.OBS
 import ru.gdcn.igorlo.kotlinast.drawing.Constants.SEMICOLON
 import ru.gdcn.igorlo.kotlinast.drawing.Constants.SPACE
 import ru.gdcn.igorlo.kotlinast.drawing.Constants.STRING
-import ru.gdcn.igorlo.kotlinast.parser.AstBuilder.AstNode
+import ru.gdcn.igorlo.kotlinast.parser.AST.AstNode
 import java.io.IOException
 import java.io.File
 import java.nio.file.Paths

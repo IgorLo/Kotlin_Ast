@@ -11,7 +11,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    implementation("guru.nidi:graphviz-kotlin:0.17.0")
+    implementation("guru.nidi:graphviz-java:0.18.0")
 }
 
 

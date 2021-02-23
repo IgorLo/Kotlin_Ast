@@ -1,14 +1,27 @@
 package ru.gdcn.igorlo.kotlinast.parser
 
+import ru.gdcn.igorlo.kotlinast.drawing.Drawer
+import java.io.File
 import java.util.*
 
 
-object AstBuilder {
+object AST {
 
     private var idCounter = 0
 
     data class AstNode(val type: String, val value: String, val children: MutableList<AstNode> = mutableListOf(), val id: Int = idCounter++) {
         override fun toString(): String = "$type\n$value"
+    }
+
+    fun parseAndDraw(inputPath: String) {
+        val codeLines = File(inputPath).readLines()
+            .filter {!it.isBlank()}
+            .map {
+                it.trim()
+                    .replace("\\s+(?=((\\\\[\\\\\"]|[^\\\\\"])*\"(\\\\[\\\\\"]|[^\\\\\"])*\")*(\\\\[\\\\\"]|[^\\\\\"])*${'$'})".toRegex(), " ")
+            }
+        val astTree = buildAst(LinkedList(codeLines))
+        Drawer().drawAST(astTree)
     }
 
     fun buildAst(codeLines: LinkedList<String>): AstNode {
